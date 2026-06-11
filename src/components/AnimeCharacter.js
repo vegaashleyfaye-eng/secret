@@ -36,6 +36,7 @@ function AnimeCharacter() {
     };
 
     fetchCharacterImages();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const positions = ['sticker-1', 'sticker-2', 'sticker-3', 'sticker-4', 'sticker-5'];
