@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Greeting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Input Section -->
+        <div class="input-section" id="inputSection">
+            <h1>🎉 Birthday Greeting 🎉</h1>
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="nameInput" 
+                    placeholder="Enter the birthday person's name..." 
+                    maxlength="50"
+                >
+                <button id="celebrateBtn" onclick="celebrate()">Celebrate!</button>
+            </div>
+        </div>
+
+        <!-- Greeting Section -->
+        <div class="greeting-section" id="greetingSection" style="display: none;">
+            <div class="confetti-container" id="confettiContainer"></div>
+            
+            <!-- Floating Decorations -->
+            <div class="decorations-container" id="decorationsContainer"></div>
+            
+            <!-- Cakes -->
+            <div class="cakes-container">
+                <div class="cake cake-left"></div>
+                <div class="cake cake-right"></div>
+            </div>
+
+            <!-- Main Greeting -->
+            <div class="greeting-content">
+                <h1 class="greeting-text">Happy Birthday, <span id="birthdayName">Friend</span>! 🎂</h1>
+                <div class="balloon-group">
+                    <div class="balloon b1">🎈</div>
+                    <div class="balloon b2">🎈</div>
+                    <div class="balloon b3">🎈</div>
+                    <div class="balloon b4">🎈</div>
+                    <div class="balloon b5">🎈</div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="resetBtn" onclick="reset()">Back to Start</button>
+                <button id="newGreetingBtn" onclick="generateNewGreeting()">New Greeting</button>
+            </div>
+
+            <!-- Messages -->
+            <div class="messages">
+                <p class="message" id="message1">Wishing you a day filled with joy and laughter!</p>
+                <p class="message" id="message2">May all your dreams come true! 🌟</p>
+                <p class="message" id="message3">Have an amazing day! 🎊</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

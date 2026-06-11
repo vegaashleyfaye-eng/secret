@@ -1,0 +1,270 @@
+.stickers-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.character-sticker {
+  position: fixed;
+  width: 200px;
+  height: 300px;
+  border-radius: 40px;
+  overflow: hidden;
+  animation: sticker-pop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.5));
+  transform-origin: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border: 4px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+}
+
+@keyframes sticker-pop {
+  from {
+    opacity: 0;
+    transform: scale(0) rotate(-180deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Sticker positions - spread around the screen */
+.sticker-1 {
+  top: 3%;
+  left: 3%;
+  animation: float-sticker-1 4s ease-in-out infinite;
+}
+
+.sticker-2 {
+  top: 5%;
+  right: 4%;
+  animation: float-sticker-2 4s ease-in-out infinite;
+  transform: rotate(-18deg);
+}
+
+.sticker-3 {
+  top: 40%;
+  left: 1%;
+  animation: float-sticker-3 4s ease-in-out infinite;
+  transform: rotate(12deg);
+}
+
+.sticker-4 {
+  top: 48%;
+  right: 2%;
+  animation: float-sticker-4 4s ease-in-out infinite;
+  transform: rotate(-15deg);
+}
+
+.sticker-5 {
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%) rotate(8deg);
+  animation: float-sticker-5 4s ease-in-out infinite;
+}
+
+@keyframes float-sticker-1 {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(2deg);
+  }
+}
+
+@keyframes float-sticker-2 {
+  0%, 100% {
+    transform: translateY(0) rotate(-18deg);
+  }
+  50% {
+    transform: translateY(-35px) rotate(-16deg);
+  }
+}
+
+@keyframes float-sticker-3 {
+  0%, 100% {
+    transform: translateY(0) rotate(12deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(14deg);
+  }
+}
+
+@keyframes float-sticker-4 {
+  0%, 100% {
+    transform: translateY(0) rotate(-15deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(-13deg);
+  }
+}
+
+@keyframes float-sticker-5 {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0) rotate(8deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-35px) rotate(10deg);
+  }
+}
+
+.sticker-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 40px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.sticker-shadow {
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.15), 0 15px 35px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+@media (max-width: 1200px) {
+  .character-sticker {
+    width: 180px;
+    height: 270px;
+  }
+
+  .sticker-1 {
+    top: 5%;
+    left: 2%;
+  }
+
+  .sticker-2 {
+    top: 8%;
+    right: 3%;
+  }
+
+  .sticker-3 {
+    top: 42%;
+    left: 0.5%;
+  }
+
+  .sticker-4 {
+    top: 50%;
+    right: 1.5%;
+  }
+
+  .sticker-5 {
+    bottom: 8%;
+  }
+}
+
+@media (max-width: 768px) {
+  .character-sticker {
+    width: 140px;
+    height: 210px;
+    border-radius: 25px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .sticker-image {
+    border-radius: 25px;
+  }
+
+  .sticker-shadow {
+    border-radius: 25px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1), 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
+
+  .sticker-1 {
+    top: 8%;
+    left: 1%;
+    width: 130px;
+    height: 200px;
+  }
+
+  .sticker-2 {
+    top: 10%;
+    right: 2%;
+    width: 130px;
+    height: 200px;
+  }
+
+  .sticker-3 {
+    top: 45%;
+    left: 0.5%;
+    width: 125px;
+    height: 190px;
+  }
+
+  .sticker-4 {
+    top: 55%;
+    right: 1%;
+    width: 125px;
+    height: 190px;
+  }
+
+  .sticker-5 {
+    bottom: 10%;
+    width: 135px;
+    height: 205px;
+  }
+}
+
+@media (max-width: 480px) {
+  .character-sticker {
+    width: 110px;
+    height: 165px;
+    border-radius: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .sticker-image {
+    border-radius: 18px;
+  }
+
+  .sticker-shadow {
+    border-radius: 18px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.35);
+  }
+
+  .sticker-1 {
+    top: 5%;
+    left: 0.5%;
+  }
+
+  .sticker-2 {
+    top: 8%;
+    right: 1%;
+  }
+
+  .sticker-3 {
+    top: 42%;
+    left: 0.3%;
+  }
+
+  .sticker-4 {
+    top: 58%;
+    right: 0.5%;
+  }
+
+  .sticker-5 {
+    bottom: 12%;
+    width: 105px;
+    height: 160px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

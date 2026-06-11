@@ -1,0 +1,157 @@
+.cake-container {
+  position: absolute;
+  bottom: 20px;
+  z-index: 8;
+}
+
+.cake-container.cake-left {
+  left: 30px;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.cake-container.cake-right {
+  right: 30px;
+  animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.cake {
+  position: relative;
+  width: 80px;
+  height: 100px;
+}
+
+.cake-base {
+  width: 100%;
+  height: 60px;
+  position: relative;
+}
+
+.cake-layer {
+  position: absolute;
+  width: 100%;
+  height: 18px;
+  border-radius: 5px;
+}
+
+.cake-layer-1 {
+  background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+  bottom: 42px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cake-layer-2 {
+  background: linear-gradient(135deg, #ff85c1 0%, #ff69b4 100%);
+  bottom: 24px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cake-layer-3 {
+  background: linear-gradient(135deg, #ffa0d2 0%, #ff85c1 100%);
+  bottom: 6px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.candle {
+  position: absolute;
+  width: 6px;
+  height: 30px;
+  background: #fff8dc;
+  left: 20px;
+  bottom: 60px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.candle-2 {
+  left: 37px;
+}
+
+.candle-3 {
+  left: 54px;
+}
+
+.flame {
+  position: absolute;
+  width: 8px;
+  height: 15px;
+  background: linear-gradient(to top, #ff6347, #ffa500, #ffff00);
+  bottom: 30px;
+  left: -1px;
+  border-radius: 50% 50% 50% 50%;
+  animation: flicker 0.6s ease-in-out infinite;
+  filter: drop-shadow(0 0 5px #ff6347);
+}
+
+@keyframes flicker {
+  0%, 100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleY(1.2) scaleX(0.8);
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 768px) {
+  .cake-container.cake-left {
+    left: 10px;
+  }
+
+  .cake-container.cake-right {
+    right: 10px;
+  }
+
+  .cake {
+    width: 60px;
+    height: 80px;
+  }
+
+  .cake-layer {
+    height: 14px;
+  }
+
+  .cake-layer-1 {
+    bottom: 34px;
+  }
+
+  .cake-layer-2 {
+    bottom: 20px;
+  }
+
+  .cake-layer-3 {
+    bottom: 6px;
+  }
+
+  .candle {
+    height: 24px;
+    bottom: 48px;
+  }
+
+  .flame {
+    height: 12px;
+    bottom: 24px;
+  }
+}
